@@ -65,7 +65,7 @@ app.post("/register", async (req,res)=>{
 app.post("/login",async (req,res)=>{
     try{
         // get all data from frontend
-        const {email,passoword}=req.body;
+        const {email,password}=req.body;
 
         // validation
         if(!(email && password)){
@@ -76,7 +76,7 @@ app.post("/login",async (req,res)=>{
         const userDetails = await User.findOne({email});
 
         // match password 
-        if(userDetails && (bcrypt.compare(passoword,userDetails.password))){
+        if(userDetails && (bcrypt.compare(password,userDetails.password))){
 
             const token = jwt.sign(
                 {id:user._id,email:email},
