@@ -1,0 +1,9 @@
+{
+    "name":"Node.js",
+    "image":"mcr.microsoft.com/devcontainers/javascript-node:16-bullseye",
+    "features":{
+        "ghcr.io/devcontainers/features/docker-from-docker:1":{}
+    },
+    "forwardPorts": [4000],
+    "postCreateCommand": "yarn install"
+}
