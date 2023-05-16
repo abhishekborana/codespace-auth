@@ -5,5 +5,17 @@
         "ghcr.io/devcontainers/features/docker-from-docker:1":{}
     },
     "forwardPorts": [4000],
-    "postCreateCommand": "yarn install"
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "rangav.vscode-thunder-client"
+            ],
+            "settings": {
+                "editor.fontSize": 20,
+                "terminal.integrated.fontSize": 18
+            }
+        }
+    }
 }
